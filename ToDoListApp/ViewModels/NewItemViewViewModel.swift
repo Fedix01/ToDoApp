@@ -35,10 +35,9 @@ class NewItemViewViewModel:ObservableObject {
             )
         
         let db = Firestore.firestore()
-        
-        db.collection("users")
+            db.collection("users")
             .document(uId)
-            .collection("todo")
+            .collection("todos")
             .document(newId)
             .setData(newItem.asDictionary()) { error in
                 
